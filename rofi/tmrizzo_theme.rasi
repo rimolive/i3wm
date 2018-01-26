@@ -4,6 +4,33 @@
  * Description: Based on the work of Dave Davenport
  */
 
+/**
+ * Working with transparencya in colors
+ * The color scheme is #RRGGBBAA where AA is the
+ * transparency level:
+ * 100% - FF
+ * 95% - F2
+ * 90% - E6
+ * 85% - D9
+ * 80% - CC
+ * 75% - BF
+ * 70% - B3
+ * 65% - A6
+ * 60% - 99
+ * 55% - 8C
+ * 50% - 80
+ * 45% - 73
+ * 40% - 66
+ * 35% - 59
+ * 30% - 4D
+ * 25% - 40
+ * 20% - 33
+ * 15% - 26
+ * 10% - 1A
+ * 5% - 0D
+ * 0% - 00
+ */
+
 configuration {
     // Prompt icon for ssh mode:
     display-ssh:     " ";
@@ -15,7 +42,7 @@ configuration {
     display-window:  " ";
     // Prompt for combi mode:
     display-combi:   " ";
-    show-icons: true;
+    show-icons: false;
 }
 
 * {
@@ -25,9 +52,12 @@ configuration {
     dark: #1c1c1c;
     // Black
     //
-    black:        #3D352A;
+    black:        #000000;
     lightblack:   #1E1E1E;
-    tlightblack:  #1E1E1ECC;
+    tlightblack:  #1E1E1E73;
+    //Gray
+    gray:         #1C1C1C;
+    tlightgray:   #1C1C1CCC;
     // Red
     //
     red:          #A30000;
@@ -46,19 +76,17 @@ configuration {
     blue:         #0088CE;
     lightblue:    #00B9E4;
     darkblue:     #1B5564;
-    // Magenta
+    // Purple
     //
-    magenta:      #deb887;
-    lightmagenta: #996600;
+    purple:      #7551A6;
     // Cyan
     //
-    cyan:         #b0c4de;
-    tcyan:        #ccb0c4de;
-    lightcyan:    #b0c4de;
+    cyan:         #38C8E8;
+    tcyan:        #82DDF1;
     // White
     //
-    white:        #bbaa99;
-    lightwhite:   #ddccbb;
+    white:        #F0F0F0;
+    lightwhite:   #E6E6E6;
     // Bold, Italic, Underline
     //
     highlight: underline bold #ffffff;
@@ -70,14 +98,15 @@ configuration {
     location: center;
     anchor:   center;
     transparency: "screenshot";
-    padding: 1px;
-    border:  1px;
-    border-radius: 0px;
-    color: @magenta;
+    padding: 0px;
+    border:  0px;
+    border-radius: 4px;
+    color: @purple;
     background-color: @transparent;
     spacing: 1;
     children: [vertb, mainbox];
     orientation: horizontal;
+    fullscreen: false;
 }
 
 #mainbox {
@@ -112,7 +141,7 @@ configuration {
     border-radius: 0px 0px 0px 0px;
     border-color: @foreground;
     border: 0px 0px 0px 0px;
-    background-color: #1c1c1ccc;
+    background-color: @tlightgray;
     dynamic: false;
     lines: 10;
 }

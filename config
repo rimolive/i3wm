@@ -261,14 +261,16 @@ bindsym $sup+Escape kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $sup+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -l 7 -nb '#1E1E1E' -nf '#FFFFFF' -sf '#0088CE' -fn 'Ubuntu 11'"
+#bindsym $sup+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -l 7 -nb '#1E1E1E' -nf '#FFFFFF' -sf '#0088CE' -fn 'Ubuntu 11'"
+#bindsym $sup+d exec rofi -theme "$rofi_folder/tmrizzo_theme.rasi" -show combi -combi-modi "window,run,drun" -modi combi -lines 6 -opacity "30"
+bindsym $sup+d exec rofi -theme "$rofi_folder/tmrizzo_theme.rasi" -show drun
 # Start rofi (alternative program launcher)
 #bindsym $sup+d exec rofi -show run
 
 # Window switcher
-bindsym $sup+dead_grave exec rofi -theme "$rofi_folder/tmrizzo_theme.rasi" -show run -lines 6 -opacity "30"
-bindsym F8  exec rofi -theme "$rofi_folder/tmrizzo_theme.rasi" -show window -lines 6 -opacity "30"
-bindsym F12 exec rofi -theme "$rofi_folder/tmrizzo_theme.rasi" -show ssh -lines 6 -opacity "30"
+bindsym $sup+dead_grave exec rofi -theme "$rofi_folder/tmrizzo_theme.rasi" -show run
+bindsym F8  exec rofi -theme "$rofi_folder/tmrizzo_theme.rasi" -show window
+bindsym F12 exec rofi -theme "$rofi_folder/tmrizzo_theme.rasi" -show ssh
 
 # Lock screen
 bindsym $sup+Ctrl+l exec $scripts/dunst_i3lock
