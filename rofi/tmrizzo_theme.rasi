@@ -54,7 +54,7 @@ configuration {
     //
     black:        #000000;
     lightblack:   #1E1E1E;
-    tlightblack:  #1E1E1E73;
+    tlightblack:  #1E1E1ECC;
     //Gray
     gray:         #1C1C1C;
     tlightgray:   #1C1C1CCC;
