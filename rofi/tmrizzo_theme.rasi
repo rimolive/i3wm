@@ -5,7 +5,7 @@
  */
 
 /**
- * Working with transparencya in colors
+ * Working with transparency in colors
  * The color scheme is #RRGGBBAA where AA is the
  * transparency level:
  * 100% - FF

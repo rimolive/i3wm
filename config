@@ -143,7 +143,7 @@ set $screenlayout ~/.config/i3/screenlayout
 exec_always --no-startup-id feh --bg-scale $wallpaper_folder/wallhaven-64352.jpg
 
 # Composite window
-exec --no-startup-id compton --config $i3_path/compton.conf
+exec --no-startup-id compton --config $i3_path/compton/compton.conf
 
 # Dunst notification daemon
 exec --no-startup-id dunst -config $i3_path/dunst/dunstrc
@@ -598,7 +598,7 @@ bar {
       id 0
 
       # Set font
-      font pango: Ubuntu, FontAwesome 12
+      font pango: Ubuntu, FontAwesome 11
 
       # py3status status bar
       status_command py3status -c $i3_path/i3status.conf
@@ -650,7 +650,7 @@ bar {
       id 1
 
       # Set font
-      font pango: Ubuntu, FontAwesome 12
+      font pango: Ubuntu, FontAwesome 11
 
       # Set output screen
       output $screen2

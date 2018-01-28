@@ -8,6 +8,7 @@ The whole i3wm config file has comments, commands, examples, and so on to help n
 ~~~
 # dnf copr enable mkrawiec/i3desktop
 # dnf copr enable jvcelak/playerctl
+# dnf copr enable yaroslav/i3desktop
 ~~~
 
 - Base Packages:
