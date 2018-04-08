@@ -496,27 +496,42 @@ assign [class="[Ff]irefox"] $ws2
 assign [class="[Aa]tom"] $ws3
 assign [class="[Vv]irt-manager"] $ws6
 assign [class="[Vv]irtual[Bb]ox"] $ws6
+assign [class="[Ss]team$"] $ws7
 assign [class="q[Bb]ittorrent"] $ws8
+assign [class="vlc"] $ws8
 assign [class="[Hh]exchat"] $ws9
 assign [class="[Aa]utokey-gtk"] $ws9
 assign [class="[Ll]inphone"] $ws0
-assign [class="[Ss]team$"] $ws7
 
 # Program-Related Bindings
 # Application variables for typewriter numeric keys
-set $tn_app0 "nemo"
 set $tn_app1 "google-chrome"
 set $tn_app2 "firefox"
 set $tn_app3 "atom"
-set $tn_app4 "vlc"
+#set $tn_app4 ""
 #set $tn_app5 ""
 #set $tn_app6 ""
 #set $tn_app7 ""
 #set $tn_app8 ""
 #set $tn_app9 ""
+set $tn_app0 "nemo"
+
+# Application variables for alternate typewriter numeric keys
+# alternate is right alt (AltGr)
+#set $tna_app1 ""
+#set $tna_app2 ""
+#set $tna_app3 ""
+#set $tna_app4 ""
+#set $tna_app5 ""
+#set $tna_app6 ""
+#set $tna_app7 ""
+#set $tna_app8 ""
+#set $tna_app9 ""
+#set $tna_app0 ""
+set $tna_app10 "env QT_AUTO_SCREEN_SCALE_FACTOR=0 vlc"
+set $tna_app11 "env QT_AUTO_SCREEN_SCALE_FACTOR=0 qbittorrent"
 
 # Application variables for numeric keypad
-set $KP_app0 "nemo"
 set $KP_app1 "google-chrome"
 set $KP_app2 "firefox"
 set $KP_app3 "atom"
@@ -526,6 +541,7 @@ set $KP_app4 "hexchat"
 #set $KP_app7 ""
 #set $KP_app8 ""
 #set $KP_app9 ""
+set $KP_app0 "nemo"
 
 # Prinscreen select are
 bindsym --release Print exec --no-startup-id "import $screenshot_dir/screenshot_`date +%Y%m%d_%H%M%S`.png"
@@ -553,6 +569,10 @@ bindsym $altgr+KP_Left exec --no-startup-id $KP_app4
 #bindsym $sup+KP_Home exec $KP_app7
 #bindsym $sup+KP_Up exec $KP_app8
 #bindsym $sup+KP_Prior exec $KP_app9
+
+# Number alternate launcher with AltGr
+bindsym $altgr+Shift+dead_belowdot exec --no-startup-id $tna_app10
+bindsym $altgr+Shift+division exec --no-startup-id $tna_app11
 
 # Application laucher mode
 set $mode_app '[a]tom,[e]explorer,[f]irefox,[c]hrome,[v]ideo,q[b]itorrent,[s]creenshot'
