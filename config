@@ -222,18 +222,16 @@ mode "$mode_display_wfh" {
 
 # Set TouchPad device
 # Commands: xinput list and xinput list-props $touchpad
-set $touchpad "SynPS/2 Synaptics TouchPad"
+set $touchpad "Synaptics TM2722-001"
 
 # Set audio out devices
 # Command: pactl list sinks
-set $audio_out1 0
-#set $audio_out1 alsa_output.pci-0000_00_1b.0.analog-stereo
+set $audio_out1 alsa_output.pci-0000_00_1b.0.analog-stereo
 #set $audio_out1 alsa_output.pci-0000_00_1f.3.analog-stereo
 
 # Set audio in devices
 # Command: pactl list sources
-set $audio_inp1 1
-#set $audio_inp1 alsa_input.pci-0000_00_1b.0.analog-stereo
+set $audio_inp1 alsa_input.pci-0000_00_1b.0.analog-stereo
 #set $audio_inp1 alsa_input.pci-0000_00_1f.3.analog-stereo
 
 # NetworkManager applet
