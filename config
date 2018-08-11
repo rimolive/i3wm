@@ -222,7 +222,8 @@ mode "$mode_display_wfh" {
 
 # Set TouchPad device
 # Commands: xinput list and xinput list-props $touchpad
-set $touchpad "SynPS/2 Synaptics TouchPad"
+#set $touchpad "SynPS/2 Synaptics TouchPad"
+set $touchpad "11"
 
 # Set audio out devices
 # Command: pactl list sinks
