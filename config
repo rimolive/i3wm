@@ -4,13 +4,11 @@
 #
 # PRE-REQUISITES:
 # Repositories:
-# dnf copr enable mkrawiec/i3desktop
-# dnf copr enable jvcelak/playerctl
 # dnf copr enable yaroslav/i3desktop
 #
 # Packages:
-# i3 i3lock i3-ipc i3status py3status playerctl feh compton rofi tlp \
-# network-manager-applet terminator smplayer mpv vlc atom numlockx dunst
+# i3 i3lock i3-ipc i3status py3status feh compton rofi tlp pcre-tools \
+# network-manager-applet terminator vlc ImageMagick dunst
 #
 # Tested with:
 # i3-4.14.1
@@ -169,14 +167,14 @@ exec_always --no-startup-id xset -dpms
 # Command: xrandr --query
 
 # Primary screen
-set $screen1 "eDP1"
+set $screen1 "eDP-1"
 
 # Secondary screen
-set $screen2 "DP2-1"
+set $screen2 "DP-2-1"
 
 # Other screens
-set $screen3 "DP2-2"
-set $screen4 "DP2-3"
+set $screen3 "DP-2-2"
+set $screen4 "DP-2-3"
 
 # Set primary screen
 exec --no-startup-id xrandr --output $screen1 --primary --rotate normal
@@ -222,8 +220,7 @@ mode "$mode_display_wfh" {
 
 # Set TouchPad device
 # Commands: xinput list and xinput list-props $touchpad
-#set $touchpad "SynPS/2 Synaptics TouchPad"
-set $touchpad "11"
+set $touchpad "SynPS/2 Synaptics TouchPad"
 
 # Set audio out devices
 # Command: pactl list sinks
@@ -267,14 +264,16 @@ bindsym $sup+Escape kill
 # installed.
 #bindsym $sup+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -l 7 -nb '#1E1E1E' -nf '#FFFFFF' -sf '#0088CE' -fn 'Ubuntu 11'"
 #bindsym $sup+d exec rofi -theme "$rofi_dir/tmrizzo_theme.rasi" -show combi -combi-modi "window,run,drun" -modi combi -lines 6 -opacity "30"
-bindsym $sup+d exec rofi -theme "$rofi_dir/tmrizzo_theme.rasi" -show drun
+#bindsym $sup+d exec rofi -theme "$rofi_dir/tmrizzo_theme.rasi" -show drun
+bindsym $sup+d exec XDG_CURRENT_DESKTOP=KDE rofi -theme "$rofi_dir/tmrizzo_theme.rasi" -show drun
+
 # Start rofi (alternative program launcher)
 #bindsym $sup+d exec rofi -show run
 
 # Window switcher
-bindsym $sup+dead_grave exec rofi -theme "$rofi_dir/tmrizzo_theme.rasi" -show run
-bindsym F8  exec rofi -theme "$rofi_dir/tmrizzo_theme.rasi" -show window
-bindsym F12 exec rofi -theme "$rofi_dir/tmrizzo_theme.rasi" -show ssh
+bindsym $sup+dead_grave exec XDG_CURRENT_DESKTOP=KDE rofi -theme "$rofi_dir/tmrizzo_theme.rasi" -show run
+bindsym F8  exec XDG_CURRENT_DESKTOP=KDE rofi -theme "$rofi_dir/tmrizzo_theme.rasi" -show window
+bindsym F12 exec XDG_CURRENT_DESKTOP=KDE rofi -theme "$rofi_dir/tmrizzo_theme.rasi" -show ssh
 
 # Lock screen
 bindsym $sup+Ctrl+l exec $scripts/dunst_i3lock
