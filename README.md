@@ -6,14 +6,12 @@ The whole i3wm config file has comments, commands, examples, and so on to help n
 
 - Copr Repositories:
 ~~~
-# dnf copr enable mkrawiec/i3desktop
-# dnf copr enable jvcelak/playerctl
 # dnf copr enable yaroslav/i3desktop
 ~~~
 
 - Base Packages:
 ~~~
-# dnf install i3 i3lock i3-ipc i3status py3status feh compton rofi playerctl network-manager-applet
+# dnf install i3 i3lock i3-ipc i3status py3status feh compton rofi terminator ImageMagick pcre-tools network-manager-applet
 ~~~
 
 - Install:
